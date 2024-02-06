@@ -64,7 +64,7 @@ const searchHandle = async(event)=>{
 
   return (
     <div className="product-list">
-      <h3>Product List</h3>
+      <h1>Product List</h1>
       {/* making search bar  */}
       <input type="text" className="search-product-box" placeholder="Search Product"
       onChange={searchHandle} />
@@ -73,6 +73,7 @@ const searchHandle = async(event)=>{
         <li>Name</li>
         <li>Price</li>
         <li>Category</li>
+        <li>Company</li>
         <li>Operation</li>
       </ul>
       {
@@ -82,6 +83,7 @@ const searchHandle = async(event)=>{
           <li>{index + 1}</li>
           <li>{item.name}</li>
           <li>{item.price}</li>
+          <li>{item.company}</li>
           <li>{item.category}</li>
           <li>
             <button onClick={() => deleteProduct(item._id)}>Delete</button>
